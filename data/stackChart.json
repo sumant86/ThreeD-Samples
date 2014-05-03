@@ -1,0 +1,90 @@
+{
+    "chart": [
+        {
+            "Year": "Y01",
+            "Budget": "455",
+            "Security": "30",
+            "Development": "10",
+            "Maintenance": "1"
+
+        },
+        {
+            "Year": "Y02",
+            "Budget": "401",
+            "Security": "32",
+            "Development": "11",
+            "Maintenance": "5"
+        },
+        {
+            "Year": "Y03",
+            "Budget": "500",
+            "Security": "31",
+            "Development": "60",
+            "Maintenance": "10"
+        },
+        {
+            "Year": "Y04",
+            "Budget": "550",
+            "Security": "35",
+            "Development": "20",
+            "Maintenance": "10"
+        },
+        {
+            "Year": "Y05",
+            "Budget": "600",
+            "Security": "40",
+            "Development": "10",
+            "Maintenance": "0"
+        },
+        {
+            "Year": "Y06",
+            "Budget": "700",
+            "Security": "45",
+            "Development": "10",
+            "Maintenance": "50"
+        },
+        {
+            "Year": "Y07",
+            "Budget": "800",
+            "Security": "60",
+            "Development": "10",
+            "Maintenance": "20"
+        },
+        {
+            "Year": "Y08",
+            "Budget": "900",
+            "Security": "70",
+            "Development": "10",
+            "Maintenance": "20"
+        },
+        {
+            "Year": "Y09",
+            "Budget": "850",
+            "Security": "85",
+            "Development": "50",
+            "Maintenance": "0"
+        },
+        {
+            "Year": "Y10",
+            "Budget": "880",
+            "Security": "67",
+            "Development": "40",
+            "Maintenance": "10"
+        },
+        {
+            "Year": "Y11",
+            "Budget": "900",
+            "Security": "70",
+            "Development": "10",
+            "Maintenance": "0"
+        },
+        {
+            "Year": "Y12",
+            "Budget": "1000",
+            "Security": "75",
+            "Development": "10",
+            "Maintenance": "0"
+
+        }
+    ]
+}
