@@ -8,7 +8,7 @@ var stackChart = function() {
     };
     ajaxLoader.fetch(ajaxParams, stack.show);
 };
-var groupChart = function(){
+var groupChart = function() {
     var ajaxParams = {
         url: "data/stackChart.json",
         async: false,
@@ -168,7 +168,7 @@ var group = {
                 material: basicMaterial,
                 zAxis: 5,
                 axisTop: 0,
-                xAxis:0,
+                xAxis: 0,
                 count: i
             };
             group.bar(barData);
@@ -177,7 +177,7 @@ var group = {
                 value: chartData.Security,
                 height: ((chartData.Budget / 20) * chartData.Security) / (100),
                 axisTop: 0,
-                xAxis:2.5,
+                xAxis: 2.5,
                 material: basicMaterial1,
                 zAxis: 5,
                 count: i
@@ -190,7 +190,7 @@ var group = {
                 material: basicMaterial2,
                 axisTop: 0,
                 zAxis: 5,
-                xAxis:5,
+                xAxis: 5,
                 count: i
             };
             group.bar(barData3);
@@ -201,7 +201,7 @@ var group = {
                 material: basicMaterial3,
                 axisTop: 0,
                 zAxis: 5,
-                xAxis:7.5,
+                xAxis: 7.5,
                 count: i
             };
             group.bar(barData4);
@@ -220,7 +220,7 @@ var group = {
             if (jx) {
                 var boxParam = {
                     height: jx,
-                    width:2.5,
+                    width: 2.5,
                     xAxis: data.xAxis + data.count * 20 - 100,
                     yAxis: j + (jx / 2) + data.axisTop,
                     zAxis: data.zAxis,
@@ -305,5 +305,50 @@ var onDocumentMouseMove = function(event) {
             displayLable = get.label(textParam);
             scene.add(displayLable);
         }
+    }
+};
+var Wheel = function() {
+    var extrudeSettings = {
+        amount: 5,
+        bevelEnabled: true,
+        bevelSegments: 2,
+        steps: 2,
+        bevelSize: 8,
+        bevelThickness: 5
+    };
+    var arcParam={
+        centerX:0,
+        centerY:0,
+        outerRadius:30,
+        innerRadius:20
+    };
+    var param={
+        shape:shapes.arcCircle(arcParam),
+        extrudeSettings:extrudeSettings,
+        color:0xff11FF,
+        xAxis:-200,
+        yAxis:200,
+        zAxis:50,
+        scale:1,
+        addToScene:false
+    };
+    movingWheel = get.shape.threeD(param);
+    scene.add(movingWheel);
+};
+var animateWheel = function(animation) {
+    if (animation == "wheel") {
+        movingWheel.rotation.z -= 0.03;
+        if (movingWheel.position.x <= -200 || movingWheel.position.x >= 300) {
+            movingWheel.position.x = -200;
+        }
+        movingWheel.position.x += 1;
+        requestAnimationFrame(function() {
+            animateWheel("wheel");
+        });
+        render();
+    } else {
+        requestAnimationFrame(animate);
+        controls.update();
+        render();
     }
 };
