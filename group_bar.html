@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Multi layer diagram with Perspective view, lines connecting nodes</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <style>
+            body {
+                color: #000;
+                font-family:Monospace;
+                font-size:13px;
+                text-align:center;
+                font-weight: bold;
+
+                background-color: #FFF;
+                margin: 0px;
+                overflow: hidden;
+            }
+            #MyCanvas{
+                background: #ffffff;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="MyCanvas"></div>
+        <script src="lib/jquery.js"></script>
+        <!--[if gt IE 8]><script src="lib/ie.float32array.js"></script> <![endif]-->
+        <script src="lib/three.min.js"></script>
+        <script src="examples/js/Detector.js"></script>
+        <script src="examples/js/controls/TrackballControls.js"></script>
+        <script src="examples/fonts/helvetiker_regular.typeface.js"></script>
+        <script src="lib/threeJsSetup.js"></script>
+        <script src="lib/mesh.js"></script>
+        <script src="custom.js"></script>
+        <script>
+            init("PerspectiveCamera", "WebGL", "#MyCanvas", "groupChart", 0xFFFFFF);
+            animate();
+        </script>
+    </body>
+</html>
